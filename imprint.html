@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="SWISS SOLUTIONS AG">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+	<title>Swiss Solutions AG</title>
+
+	<link rel="icon" href="./assets/images/logo.png">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/styles/font-awesome.min.css">
+
+	<link rel="stylesheet" href="./assets/styles/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="./assets/styles/styles.css">
+	<link type="text/css" rel="stylesheet" href="./assets/styles/cookieconsent.min.css">
+</head>
+
+<body>
+
+<div class="ss-main-container">
+	<nav id="ss-navbar" class="navbar navbar-default navbar-fixed-top">
+		<!-- Navbar Container -->
+		<div class="container">
+
+			<!-- Navbar Header [contains both toggle button and navbar brand] -->
+			<div class="navbar-header">
+				<!-- Toggle Button [handles opening navbar components on mobile screens]-->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#ss-nav-component" aria-expanded="false">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<!-- Navbar Brand -->
+				<a href="#" class="navbar-brand">
+					<img class="logo" src="./assets/images/logo.png" alt="SWISS SOLUTIONS LOGO">
+					<h2>SWISS SOLUTIONS AG</h2>
+					<div class="clearfix"></div>
+				</a>
+			</div>
+
+			<!-- Navbar Collapse [contains navbar components such as navbar menu and forms ] -->
+			<div class="collapse navbar-collapse" id="ss-nav-component">
+				<!-- Navbar Menu -->
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="./index.html">WILLKOMMEN</a>
+					</li>
+					<li>
+						<a href="./index.html#SecurityAudits">SECURITY AUDITS</a>
+					</li>
+					<li>
+						<a href="./index.html#SecurityAnalytics" data-target="SecurityAnalytics-content">SECURITY ANALYTICS</a>
+					</li>
+					<li>
+						<a href="./index.html#SecurityIntegration" data-target="SecurityIntegration-content">SECURITY INTEGRATION</a>
+					</li>
+					<li>
+						<a href="./index.html#contact-content" data-target="contact-content">KONTAKT</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<header id="ss-header">
+		<div class="header-bg-container">
+			<img class="header-bg" src="./assets/images/new-header-bg.png" alt="header background" />
+		</div>
+	</header>
+	<section id="imprint-section">
+		<div class="container">
+			<h2>IMPRESSUM</h2>
+			<div class="imprint-info">
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="impress-left">
+							<p>Swiss Solutions AG</p>
+							<p>Sitz: Zug</p>
+							<p>Um uns zu kontaktieren, um die Kontaktseite zu besuchen. </p>
+							<p>
+								<a href="./index.html#contact-content" class="btn btn-1">
+			      			<span class="txt">Contact Us</span>
+			      			<span class="round"><i class="fa fa-chevron-right"></i></span>
+		    				</a>
+		    			</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="impress-right">
+							<div class="contact-line">
+								<div class="contact-icon">
+									<i class="fa fa-address-card"></i>
+								</div>
+								<div class="contact-info">
+									<p> Swiss Solutions AG Steinhauserstrasse 74 CH-6300 Zug</p>
+								</div>
+							</div>
+							<div class="contact-line">
+								<div class="contact-icon">
+									<i class="fa fa-phone"></i>	
+								</div>
+								<div class="contact-info">
+									<p> +41 41 508 02 54</p>
+								</div>
+							</div>
+							<div class="contact-line">
+								<div class="contact-icon">
+									<i class="fa fa-print"></i>	
+								</div>
+								<div class="contact-info">
+									<p> +41 41 508 02 54</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="impressum-ss-footer">
+		<div class="container">
+			<p class="description">
+				Swiss Solutions Copyright 2018 / All rights reserved<br>
+				<a href="./privacy.html">Privacy Policy</a> / <a href="http://www.swiss-solutions.com/xxx.pdf" download="">Terms and Conditions</a> / <a href="./imprint.html">Impressum</a>
+			</p>
+		</div>
+	</footer>
+	<button onclick="location.href='./index.html'" class="back-page" type="button"><i class="fa fa-chevron-left"></i></button>
+	<button class="scroll-top" data-scroll="up" type="button"><i class="fa fa-chevron-up"></i></button>
+</div>
+
+<script src="./assets/js/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/notify.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/cookieconsent.min.js"></script>
+<script>
+	var p;
+	cookieconsent.initialise({
+		type: 'opt-out',
+		palette: {
+			"popup": { "background": "#e82732", "text": "#ffffff" },
+			"button": { "background": "#ffffff", "text": "#e82732" },
+		},
+	}, function (popup) {
+		p = popup;
+		}, function (err) {
+		console.error(err);
+	});
+
+	/* Scroll-Top Button */ 
+	$(document).ready(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('.scroll-top').fadeIn();
+			} else {
+				$('.scroll-top').fadeOut();
+			}
+		});
+
+		$('.scroll-top').click(function () {
+			$("html, body").animate({
+				scrollTop: 0
+			}, 100);
+			return false;
+		});
+	});
+
+	// .ready syntax suitable for old jquery ver.
+	$("document").ready(function () {
+
+		var navbar = document.getElementById("ss-navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+			if (window.pageYOffset >= 50) {
+				navbar.classList.add("sticky")
+			} else {
+				navbar.classList.remove("sticky");
+			}
+		}
+
+		window.onscroll = function () {
+			myFunction()
+		};
+
+		$('.navbar-nav>li>a').on('click', function () {
+			$('.navbar-collapse').collapse('hide');
+		});
+
+		$('#ss-navbar .navbar-nav>li>a').on('click', function () {
+			var gotoPage = $(this).attr('data-target');
+			$("html, body").animate({scrollTop: $('#' + gotoPage).offset().top - 100}, 500);
+			return false;
+		})
+
+		$('.navbar-brand').on('click', function () {
+			$("html, body").animate({scrollTop: 0}, 500);
+			return false;
+		})
+	})
+
+</script>
+</body>
+</html>
